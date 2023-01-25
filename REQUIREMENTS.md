@@ -12,7 +12,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 #### Users
 - show [token required]
 - index [token required]
-- createUser [token required]
+- createUser
 - updateUser [token required]
 - deleteUser [token required]
 - authenticateUser

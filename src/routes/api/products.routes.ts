@@ -6,8 +6,8 @@ const routes = Router();
 
 routes.post('/',authValidationHandler ,controller.createProduct);
 
-routes.get('/',authValidationHandler ,controller.index);
+routes.get('/',controller.index);
 
-routes.get('/:id',authValidationHandler ,authValidationHandler,controller.show);
+routes.get('/:id',authValidationHandler,controller.show);
 
 export default routes;

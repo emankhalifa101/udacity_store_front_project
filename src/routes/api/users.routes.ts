@@ -8,7 +8,7 @@ routes.get('/',authValidationHandler ,controller.index);
 
 routes.get('/:id',authValidationHandler,controller.show);
 
-routes.post('/',authValidationHandler ,controller.createUser);
+routes.post('/',controller.createUser);
 
 routes.put('/',authValidationHandler,controller.updateUser);
 
