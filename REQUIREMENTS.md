@@ -186,7 +186,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
     ```json
       {
-        "user_name": "test10User",
+        "email": "test10User",
         "password": "1234"
       }
     ```
