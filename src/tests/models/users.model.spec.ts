@@ -1,5 +1,4 @@
 import UserModel from "../../models/users.model";
-import db from '../../db';
 
 describe('UserModel Tests',()=> {
     const userModel = new UserModel();
@@ -51,10 +50,16 @@ describe('UserModel Tests',()=> {
             l_name: "hema",
             password: "2020"
         }
-        const newUser = await userModel.create(user2);
+        await userModel.create(user2);
         await userModel.deleteUser(2);
         const user = await userModel.show(2);
         expect(user).toBeFalsy();  
+    }); 
+    it('should authenticate user',async ()=> {
+        const authenticatedUser = await userModel.authenticateUser("deda2020", '2020');
+        if(authenticatedUser) {
+            expect(authenticatedUser.user_name).toBe("deda mansour")
+        }
     })
 
 })
