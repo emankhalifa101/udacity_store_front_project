@@ -20,4 +20,7 @@ const authValidationHandler = (req: Request, _res: Response, next: NextFunction)
     }
 };
 
+export const createJWTToken = (id: number, email: string): string =>
+  Jwt.sign({id, email}, config.tokenSecret as string)
+
 export default authValidationHandler;
